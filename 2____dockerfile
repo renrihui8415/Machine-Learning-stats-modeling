@@ -1,0 +1,29 @@
+# Use the official Python 3.9 image as the base image
+FROM python:3.9-slim-buster
+
+# Install AWS CLI
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        curl \
+        unzip && \
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    ./aws/install && \
+    rm awscliv2.zip && \
+    rm -rf ./aws && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Copy requirements.txt to the /app directory in the image
+COPY requirements.txt .
+# Install Python packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all files from the current directory to the /app directory in the image
+COPY . .
+
+# Set the default command to execute when the container starts (optional)
+CMD ["python", "/app/main.py"]
