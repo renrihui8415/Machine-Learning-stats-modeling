@@ -8,6 +8,7 @@ Testing and practicing continually unveil new insights, making learning a perpet
 
 - Python libraries: statsmodels and scikit-learn
 - Basic knowledge of statistics
+- Deep Learning - CNN 
 
 ## Series Overview:
 
