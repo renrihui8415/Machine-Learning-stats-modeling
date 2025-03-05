@@ -19,9 +19,12 @@
   - Redshift
   - SQLite
 
-- **🤖 Machine Learning:**
+- **🤖 Machine Learning & Deep Learning:**
   - Building, training, and evaluating models for regression and classification tasks
-  - Algorithms from scikit-learn and statsmodels libraries (Random Forest Regressor, Support Vector Regressor, Neural Networks)
+  - Algorithms from scikit-learn, statsmodels,
+  - Deep learning frameworks (Random Forest Regressor, Support Vector Regressor, Neural Networks
+  - Deep Learning models using TensorFlow/PyTorch
+  - Convolutional Neural Networks (CNN) for image-related tasks)
 
 - **📊 Statistical Analysis:**
   - Proficiency in statistical methods and tools for accurate data analysis and interpretation
